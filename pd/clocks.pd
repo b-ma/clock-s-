@@ -1,0 +1,35 @@
+#N canvas 667 377 813 559 10;
+#X obj 397 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 228 379 dac~;
+#X obj 82 212 osc~ 500;
+#X obj 231 333 *~;
+#X obj 305 273 line~;
+#X obj 82 92 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X msg 444 231 0 1;
+#X msg 305 232 0.5 0;
+#X msg 258 126 set \$1 0;
+#X obj 257 93 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 82 60 receive \$0-frequency;
+#X obj 257 59 receive \$0-gain;
+#X obj 397 61 receive \$0-trigger;
+#X obj 505 103 receive \$0-duration;
+#X obj 444 195 delay 80;
+#X connect 0 0 7 0;
+#X connect 0 0 14 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 3 1;
+#X connect 5 0 2 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 5 0;
+#X connect 11 0 9 0;
+#X connect 12 0 0 0;
+#X connect 13 0 14 1;
+#X connect 14 0 6 0;

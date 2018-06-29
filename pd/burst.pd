@@ -1,0 +1,15 @@
+#N canvas 206 102 761 530 10;
+#X obj 314 278 vline~;
+#X obj 264 322 *~;
+#X obj 264 349 dac~ 1;
+#X obj 314 215 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 216 248 osc~ 400;
+#X msg 314 243 1 0 \, 0 0 1;
+#X obj 314 187 receive \$0-trigger;
+#X connect 0 0 1 1;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 0 0;
+#X connect 6 0 3 0;
